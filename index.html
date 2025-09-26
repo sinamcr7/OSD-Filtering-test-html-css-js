@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="content/images/favicon.jpg">
+
+    <title>test osd filtering plugin</title>
+
+    <!-- Global stylesheets -->
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!-- /Global stylesheets -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <!-- Core JS files -->
+    <script type="text/javascript" src="content/assets/js/core/libraries/jquery.min.js"></script>
+    <!-- /core JS files -->
+
+    <script>if (window.module) module = window.module;</script>
+    <link type="text/css" rel="stylesheet" href="content/lib/style.css" />
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+</head>
+
+<body>
+<!-- Page container -->
+<div class="page-container" style="min-height: 100vh;">
+
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main content -->
+        <div class="content-wrapper">
+            <!-- Content area -->
+            <div class="content">
+                <div class="container-fluid noprint">
+                    <div class="row d-flex">
+                        <div class="col-md-10" id="viewer">
+                        </div>
+                        <div class="col-md-2 viewer-sidebar">
+                            <div class="filters">
+                                <!-- Invert -->
+                                <p class="icon-text"><i class="filter-icon"></i><span style="font-size: 10px">Filters</span></p>
+                                <span>Invert</span>
+                                <label class="switch" id="switchI">
+                                    <input type="checkbox" id="checkbxI">
+                                    <span id="invert" class="slider round"></span>
+                                </label>
+                                <br>
+                                <span>Sobel</span>
+                                <label class="switch" id="switchS">
+                                    <input type="checkbox" id="checkbxS">
+                                    <span id="sobel" class="slider round"></span>
+                                </label>
+                                <br>
+                                <span>Grey</span>
+                                <label class="switch" id="switchG">
+                                    <input type="checkbox" id="checkbxG">
+                                    <span id="greyscale" class="slider round"></span>
+                                </label>
+                                <br>
+
+                                <div class="control-panel">
+                                    <!-- Brightness -->
+                                    <div class="control-item">
+                                        <label for="brightness">Brightness</label>
+                                        <div class="range-container">
+                                            <input id="brightness" type="range" min="0" max="200" value="100">
+                                            <div class="value-bubble">100</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contrast -->
+                                    <div class="control-item">
+                                        <label for="contrast">Contrast</label>
+                                        <div class="range-container">
+                                            <input id="contrast" type="range" min="0" max="200" value="100">
+                                            <div class="value-bubble">100</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Gamma -->
+                                    <div class="control-item">
+                                        <label for="gamma">Gamma</label>
+                                        <div class="range-container">
+                                            <input id="gamma" type="range" min="0.1" max="3" step="0.1" value="1">
+                                            <div class="value-bubble">1.0</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Expposure -->
+                                    <div class="control-item">
+                                        <label for="exposure">Exposure</label>
+                                        <div class="range-container">
+                                            <input id="exposure" type="range" min="0" max="200" value="100">
+                                            <div class="value-bubble">100</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Saturation -->
+                                    <div class="control-item">
+                                        <label for="saturation">Saturation</label>
+                                        <div class="range-container">
+                                            <input id="saturation" type="range" min="0" max="200" value="100">
+                                            <div class="value-bubble">100</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /content area -->
+        </div>
+        <!-- /main content -->
+    </div>
+    <!-- /page content -->
+</div>
+<!-- /page container -->
+<script src="content/lib/osd/openseadragon/openseadragon.min.js"></script>
+<script src="content/lib/osd/OpenSeadragonFiltering/openseadragon-filtering.js"></script>
+<script src="content/lib/html2canvas/html2canvas.min.js"></script>
+<script src="content/lib/camanjs/caman.full.min.js"></script>
+<!--loading osd-->
+<script src="script.js"></script>
+</body>
+</html>
