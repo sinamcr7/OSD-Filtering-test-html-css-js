@@ -278,10 +278,10 @@ window.onload = function () {
             },
             loadMode: sync ? 'sync' : 'async'
         });
-        for ( var i = 0; i < viewer.world.getItemCount(); i++ ) {
-            viewer.world.getItemAt(i).tilesMatrix={};
-            viewer.world.getItemAt(i)._needsDraw = true;
-        }
+        // for ( var i = 0; i < viewer.world.getItemCount(); i++ ) {
+        //     viewer.world.getItemAt(i).tilesMatrix={};
+        //     viewer.world.getItemAt(i)._needsDraw = true;
+        // }
 
     }
 
